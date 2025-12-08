@@ -5,6 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects — Selcan Nasirli</title>
     <link rel="stylesheet" href="p.css">
+    <style>
+        /* --- Extra Design for Projects Page --- */
+
+        /* Card Hover Animation */
+        .project-card {
+            transform: translateY(0);
+            transition: 0.35s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 0 18px rgba(102,178,255,0.35);
+            border-color: #66b2ff;
+        }
+
+        /* Image zoom effect */
+        .project-image img {
+            transition: 0.4s ease;
+        }
+        .project-card:hover .project-image img {
+            transform: scale(1.05);
+        }
+
+        /* Title glow */
+        .section-title {
+            text-shadow: 0 0 8px #66b2ff;
+        }
+
+        /* Fade animation */
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(25px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .project-card { animation: fadeInUp 0.8s ease forwards; }
+
+        /* Nice subtle gradient background */
+        body {
+            background: radial-gradient(circle at top, #001428, #000);
+        }
+
+    </style>
 </head>
 
 <body>
@@ -33,23 +74,27 @@
     <h2 class="section-title">Academic Projects</h2>
 
     <div class="project-grid">
+
         <div class="project-card">
             <div class="project-image">
                 <img src="asoui cyber.jpeg" alt="Project Image Placeholder">
             </div>
             <h3 class="project-title">ASOIU CyberClub</h3>
             <p class="project-description">
-                ASOIU CyberClub - Active Member: As part of the university's cybersecurity community, I regularly participated in workshops, CTF practices, technical discussions, and student-led sessions. I contributed to collaborative problem-solving, strengthened my practical security skills, and stayed engaged with ongoing cybersecurity activities inside the university.
+                ASOIU CyberClub - Active Member: As part of the university's cybersecurity community, I regularly participated in workshops, CTF practices, technical discussions, and student-led sessions.
             </p>
         </div>
+
         <div class="project-card">
             <div class="project-image">
                 <img src="coursera.jpg" alt="Project Image Placeholder">
             </div>
             <h3 class="project-title">Google Cybersecurity Certificate - Coursera</h3>
             <p class="project-description">
-                Google Cybersecurity Certificate - Coursera (Completed July 2025) - Completed an industry-recognized program focused on SOC foundations, network security, threat analysis, Linux tooling, incident response, and hands-on labs with real-world security tools. This certification solidified my practical understanding of cybersecurity workflows and defensive strategies.
+                Completed an industry-recognized program focused on SOC foundations, threat analysis, Linux tooling, incident response, and practical labs.
             </p>
+        </div>
+
     </div>
 </section>
 
@@ -61,4 +106,3 @@
 </body>
 
 </html>
-
